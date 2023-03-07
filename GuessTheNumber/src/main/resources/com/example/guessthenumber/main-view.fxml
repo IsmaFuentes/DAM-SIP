@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.guessthenumber.MainContainer">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+
+    <HBox alignment="BASELINE_CENTER">
+        <CheckBox fx:id="connectedCheckbox" text="Conectado"/>
+    </HBox>
+
+    <HBox alignment="BASELINE_CENTER" spacing="50">
+        <HBox alignment="BASELINE_RIGHT">
+            <Label text="INTENTOS: "/>
+            <Label fx:id="attempts"/>
+        </HBox>
+        <HBox alignment="BASELINE_RIGHT">
+            <Label text="PLAYER ID: " />
+            <Label fx:id="playerid"/>
+        </HBox>
+    </HBox>
+
+    <HBox alignment="BASELINE_CENTER" spacing="10">
+        <Spinner fx:id="spinner" min="0" max="999"/>
+        <Button text="Enviar" onAction="#onGuessPressed"/>
+    </HBox>
+    <Label fx:id="logMessage" text="..."/>
+</VBox>
